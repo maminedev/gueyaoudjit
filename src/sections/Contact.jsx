@@ -34,7 +34,7 @@ const Contact = () => {
                   </div>
                   <div className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
                     <MapPin className="w-5 h-5 text-red-400" />
-                    <span>Algeria</span>
+                    <span>Bali, Indonesia</span>
                   </div>
                 </div>
                 
