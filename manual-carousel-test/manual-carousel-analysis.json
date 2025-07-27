@@ -1,0 +1,110 @@
+{
+  "timestamp": "2025-07-27T06:54:40.773Z",
+  "carouselInfo": {
+    "sliderItemsCount": 4,
+    "navigationDotsCount": 4,
+    "hasPrevButton": true,
+    "hasNextButton": true,
+    "viewportWidth": 1366,
+    "viewportHeight": 641,
+    "carouselRect": {
+      "top": -843.09375,
+      "left": 0,
+      "width": 1366,
+      "height": 1024.59375
+    }
+  },
+  "detailedAnalysis": {
+    "carouselStructure": {
+      "found": true,
+      "className": "w-full h-full flex-center relative",
+      "childrenCount": 3,
+      "styles": {
+        "height": "1024.59px",
+        "position": "relative",
+        "overflow": "visible"
+      }
+    },
+    "sliderItems": [
+      {
+        "index": 0,
+        "visible": true,
+        "hasImage": true,
+        "imageAlt": "Smart Menu",
+        "hasTitle": true,
+        "title": "Smart Menu",
+        "hasDescription": true,
+        "description": "Digital restaurant menu solution with interactive features",
+        "hasButton": true,
+        "buttonText": "Visit",
+        "styles": {
+          "width": "819.594px",
+          "height": "384.594px",
+          "borderRadius": "16px",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        }
+      },
+      {
+        "index": 1,
+        "visible": true,
+        "hasImage": true,
+        "imageAlt": "Spylt",
+        "hasTitle": true,
+        "title": "Spylt",
+        "hasDescription": true,
+        "description": "Modern web application with sleek design and functionality",
+        "hasButton": true,
+        "buttonText": "Visit",
+        "styles": {
+          "width": "819.594px",
+          "height": "384.594px",
+          "borderRadius": "16px",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        }
+      },
+      {
+        "index": 2,
+        "visible": true,
+        "hasImage": true,
+        "imageAlt": "Sherlock",
+        "hasTitle": true,
+        "title": "Sherlock",
+        "hasDescription": true,
+        "description": "Investigative platform with advanced search capabilities",
+        "hasButton": true,
+        "buttonText": "Visit",
+        "styles": {
+          "width": "819.594px",
+          "height": "384.594px",
+          "borderRadius": "16px",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        }
+      },
+      {
+        "index": 3,
+        "visible": true,
+        "hasImage": true,
+        "imageAlt": "Suburbia Skate",
+        "hasTitle": true,
+        "title": "Suburbia Skate",
+        "hasDescription": true,
+        "description": "Skateboarding community platform with modern aesthetics",
+        "hasButton": true,
+        "buttonText": "Visit",
+        "styles": {
+          "width": "819.594px",
+          "height": "384.594px",
+          "borderRadius": "16px",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        }
+      }
+    ],
+    "navigation": {
+      "dotsCount": 4,
+      "hasPrevButton": true,
+      "hasNextButton": true,
+      "dotsVisible": true
+    },
+    "styling": {}
+  }
+}

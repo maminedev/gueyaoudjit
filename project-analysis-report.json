@@ -1,0 +1,182 @@
+{
+  "timestamp": "2025-07-27T06:25:59.606Z",
+  "firstProjectVisibility": {
+    "sectionRect": {
+      "top": -0.09375,
+      "bottom": 1024.5,
+      "height": 1024.59375
+    },
+    "projectRect": {
+      "top": 391.90625,
+      "bottom": 776.5,
+      "height": 384.59375,
+      "width": 819.59375
+    },
+    "viewport": {
+      "height": 641,
+      "width": 1366
+    },
+    "visibilityPercentage": 64.77,
+    "visibleHeight": 249.09375,
+    "totalHeight": 384.59375,
+    "isFullyVisible": false,
+    "isPartiallyVisible": true
+  },
+  "dotNavigation": {
+    "totalDots": 4,
+    "activeDot": 0,
+    "dotsVisible": true,
+    "dotPositions": [
+      {
+        "index": 0,
+        "visible": true,
+        "position": {
+          "x": 579,
+          "y": 836.5,
+          "width": 32,
+          "height": 8
+        },
+        "isActive": true,
+        "classes": "transition-all duration-300 w-8 h-2 bg-blue-400 rounded-full"
+      },
+      {
+        "index": 1,
+        "visible": true,
+        "position": {
+          "x": 623,
+          "y": 836.5,
+          "width": 8,
+          "height": 8
+        },
+        "isActive": false,
+        "classes": "transition-all duration-300 w-2 h-2 bg-white bg-opacity-30 rounded-full hover:bg-opacity-50"
+      },
+      {
+        "index": 2,
+        "visible": true,
+        "position": {
+          "x": 643,
+          "y": 836.5,
+          "width": 8,
+          "height": 8
+        },
+        "isActive": false,
+        "classes": "transition-all duration-300 w-2 h-2 bg-white bg-opacity-30 rounded-full hover:bg-opacity-50"
+      },
+      {
+        "index": 3,
+        "visible": true,
+        "position": {
+          "x": 663,
+          "y": 836.5,
+          "width": 8,
+          "height": 8
+        },
+        "isActive": false,
+        "classes": "transition-all duration-300 w-2 h-2 bg-white bg-opacity-30 rounded-full hover:bg-opacity-50"
+      }
+    ],
+    "containerRect": {}
+  },
+  "responsiveBehavior": {
+    "Mobile": {
+      "sectionDimensions": {
+        "width": 375,
+        "height": 816.1875
+      },
+      "sliderDimensions": {
+        "width": 375,
+        "height": 400.1875
+      },
+      "dotsVisible": true,
+      "arrowsVisible": true,
+      "dotsCount": 4,
+      "arrowsCount": 2,
+      "sliderItemsCount": 4,
+      "firstSliderItemVisible": {
+        "rect": {},
+        "transform": "translate(-63vw, 0px)"
+      }
+    },
+    "Tablet": {
+      "sectionDimensions": {
+        "width": 768,
+        "height": 1145.59375
+      },
+      "sliderDimensions": {
+        "width": 768,
+        "height": 409.59375
+      },
+      "dotsVisible": true,
+      "arrowsVisible": true,
+      "dotsCount": 4,
+      "arrowsCount": 2,
+      "sliderItemsCount": 4,
+      "firstSliderItemVisible": {
+        "rect": {},
+        "transform": "translate(-63vw, 0px)"
+      }
+    },
+    "Desktop": {
+      "sectionDimensions": {
+        "width": 1200,
+        "height": 1120
+      },
+      "sliderDimensions": {
+        "width": 1200,
+        "height": 480
+      },
+      "dotsVisible": true,
+      "arrowsVisible": true,
+      "dotsCount": 4,
+      "arrowsCount": 2,
+      "sliderItemsCount": 4,
+      "firstSliderItemVisible": {
+        "rect": {},
+        "transform": "translate(-63vw, 0px)"
+      }
+    },
+    "Large Desktop": {
+      "sectionDimensions": {
+        "width": 1920,
+        "height": 1252
+      },
+      "sliderDimensions": {
+        "width": 1920,
+        "height": 648
+      },
+      "dotsVisible": true,
+      "arrowsVisible": true,
+      "dotsCount": 4,
+      "arrowsCount": 2,
+      "sliderItemsCount": 4,
+      "firstSliderItemVisible": {
+        "rect": {},
+        "transform": "translate(-63vw, 0px)"
+      }
+    }
+  },
+  "arrowNavigation": {
+    "leftArrowExists": true,
+    "rightArrowExists": true,
+    "totalArrows": 2,
+    "leftArrowVisible": true,
+    "rightArrowVisible": true,
+    "arrowClasses": [
+      "rounded-full cursor-pointer bg-black hover:bg-gray-800 hover:border-opacity-50 active:scale-90 transition-all duration-300 w-12 h-12 flex-center border-2 border-white border-opacity-30 shadow-lg",
+      "rounded-full cursor-pointer bg-black hover:bg-gray-800 hover:border-opacity-50 active:scale-90 transition-all duration-300 w-12 h-12 flex-center border-2 border-white border-opacity-30 shadow-lg"
+    ]
+  },
+  "improvements": {
+    "previousVisibilityIssue": "28.3%",
+    "currentVisibility": "64.77%",
+    "improvementCalculation": "36.47% improvement",
+    "isFullyVisible": false,
+    "isPartiallyVisible": true
+  },
+  "uiElementsFound": {
+    "projectCards": ".slider-item",
+    "dotNavigation": ".flex.justify-center.gap-3.flex-1 button",
+    "arrowNavigation": ".rounded-full.cursor-pointer"
+  }
+}

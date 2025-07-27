@@ -1,0 +1,187 @@
+{
+  "timestamp": "2025-07-27T06:48:04.858Z",
+  "url": "http://localhost:5181",
+  "projectCards": [
+    {
+      "slideIndex": 0,
+      "cardIndex": 0,
+      "tagName": "DIV",
+      "className": "w-full flex-center fixed z-50 top-0 left-0 md:p-0 px-5",
+      "textContent": "HomeAboutProjectsTestimonialsContact",
+      "hasImage": true,
+      "hasButtons": 5,
+      "buttonTexts": [
+        "Home",
+        "About",
+        "Projects",
+        "Testimonials",
+        "Contact"
+      ],
+      "styles": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "border": "0px solid rgb(204, 204, 204)",
+        "borderRadius": "0px",
+        "boxShadow": "none"
+      }
+    },
+    {
+      "slideIndex": 0,
+      "cardIndex": 1,
+      "tagName": "DIV",
+      "className": "container md:my-10 my-5 flex items-center justify-between",
+      "textContent": "HomeAboutProjectsTestimonialsContact",
+      "hasImage": true,
+      "hasButtons": 5,
+      "buttonTexts": [
+        "Home",
+        "About",
+        "Projects",
+        "Testimonials",
+        "Contact"
+      ],
+      "styles": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "border": "0px solid rgb(204, 204, 204)",
+        "borderRadius": "0px",
+        "boxShadow": "none"
+      }
+    },
+    {
+      "slideIndex": 0,
+      "cardIndex": 2,
+      "tagName": "DIV",
+      "className": "md:flex items-center gap-7 hidden",
+      "textContent": "HomeAboutProjectsTestimonialsContact",
+      "hasImage": false,
+      "hasButtons": 5,
+      "buttonTexts": [
+        "Home",
+        "About",
+        "Projects",
+        "Testimonials",
+        "Contact"
+      ],
+      "styles": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "border": "0px solid rgb(204, 204, 204)",
+        "borderRadius": "0px",
+        "boxShadow": "none"
+      }
+    }
+  ],
+  "carouselAnalysis": {
+    "carouselFound": true,
+    "carouselContainer": "[class*=\"slider\"]",
+    "navigationDots": 0,
+    "navigationArrows": 0,
+    "currentSlideVisible": false,
+    "totalSlides": 0,
+    "carouselType": "[class*=\"slider\"]"
+  },
+  "visitButtonsAnalysis": {
+    "totalFound": 4,
+    "buttons": [
+      {
+        "text": "Visit",
+        "tagName": "button",
+        "href": null,
+        "isWorking": false,
+        "isVisible": true,
+        "styles": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border": "0px solid rgb(0, 0, 0)",
+          "borderRadius": "3.35544e+07px",
+          "padding": "8px 16px",
+          "fontSize": "14px"
+        }
+      },
+      {
+        "text": "Visit",
+        "tagName": "button",
+        "href": null,
+        "isWorking": false,
+        "isVisible": true,
+        "styles": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border": "0px solid rgb(0, 0, 0)",
+          "borderRadius": "3.35544e+07px",
+          "padding": "8px 16px",
+          "fontSize": "14px"
+        }
+      },
+      {
+        "text": "Visit",
+        "tagName": "button",
+        "href": null,
+        "isWorking": false,
+        "isVisible": true,
+        "styles": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border": "0px solid rgb(0, 0, 0)",
+          "borderRadius": "3.35544e+07px",
+          "padding": "8px 16px",
+          "fontSize": "14px"
+        }
+      },
+      {
+        "text": "Visit",
+        "tagName": "button",
+        "href": null,
+        "isWorking": false,
+        "isVisible": true,
+        "styles": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border": "0px solid rgb(0, 0, 0)",
+          "borderRadius": "3.35544e+07px",
+          "padding": "8px 16px",
+          "fontSize": "14px"
+        }
+      }
+    ],
+    "workingButtons": 0,
+    "simpleDesign": true
+  },
+  "designSimplicity": {
+    "totalProjectElements": 3,
+    "averageButtonsPerCard": 5,
+    "complexityLevel": "complex",
+    "isClean": false,
+    "isMinimal": false,
+    "hasVisualClutter": true
+  },
+  "screenshots": [
+    "projects-initial.png",
+    "project-slide-1.png",
+    "project-slide-2.png",
+    "project-slide-3.png",
+    "projects-final.png"
+  ],
+  "issues": [
+    "Visit buttons found but none are properly functional (missing href)",
+    "Visual clutter detected - too many buttons/elements per card"
+  ],
+  "improvements": [
+    "Consider adding subtle hover effects to project cards"
+  ],
+  "hoverEffects": [
+    {
+      "element": "HTML",
+      "hasHoverEffect": false,
+      "changes": []
+    },
+    {
+      "element": "BODY",
+      "hasHoverEffect": false,
+      "changes": []
+    },
+    {
+      "element": "DIV",
+      "hasHoverEffect": false,
+      "changes": []
+    }
+  ]
+}

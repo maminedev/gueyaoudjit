@@ -1,0 +1,3106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simplified Projects Section Analysis Report</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            margin: 0; padding: 20px; line-height: 1.6; 
+            background: #f5f5f5;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            color: white; padding: 40px; border-radius: 12px; margin-bottom: 30px; text-align: center;
+        }
+        .header h1 { margin: 0 0 10px 0; font-size: 2.5em; }
+        .header p { margin: 5px 0; opacity: 0.9; }
+        
+        .score-overview { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 20px; margin-bottom: 30px; 
+        }
+        .score-card { 
+            background: white; padding: 25px; border-radius: 8px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; 
+        }
+        .score-value { 
+            font-size: 2.5em; font-weight: bold; margin-bottom: 10px;
+            color: #dc3545;
+        }
+        .score-label { font-weight: 600; color: #666; }
+        
+        .section { 
+            background: white; padding: 30px; margin: 20px 0; 
+            border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .section h2 { 
+            margin-top: 0; color: #333; border-bottom: 2px solid #007bff; 
+            padding-bottom: 10px; 
+        }
+        
+        .metric-grid { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 15px; margin: 20px 0; 
+        }
+        .metric { 
+            background: #f8f9fa; padding: 15px; border-radius: 6px; 
+            border-left: 4px solid #007bff; 
+        }
+        .metric-label { font-weight: 600; color: #666; font-size: 0.9em; }
+        .metric-value { font-size: 1.2em; font-weight: bold; color: #333; }
+        
+        .status-good { color: #28a745; }
+        .status-warning { color: #ffc107; }
+        .status-error { color: #dc3545; }
+        
+        .issue { 
+            background: #f8d7da; color: #721c24; padding: 12px; 
+            margin: 8px 0; border-radius: 4px; border-left: 4px solid #dc3545; 
+        }
+        .improvement { 
+            background: #d1ecf1; color: #0c5460; padding: 12px; 
+            margin: 8px 0; border-radius: 4px; border-left: 4px solid #17a2b8; 
+        }
+        .success { 
+            background: #d4edda; color: #155724; padding: 12px; 
+            margin: 8px 0; border-radius: 4px; border-left: 4px solid #28a745; 
+        }
+        
+        .screenshots { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px; margin-top: 20px; 
+        }
+        .screenshot { 
+            background: white; padding: 15px; border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: center; 
+        }
+        .screenshot img { 
+            max-width: 100%; height: auto; border-radius: 6px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+        }
+        .screenshot h4 { margin: 0 0 10px 0; color: #333; }
+        
+        .data-section { 
+            background: #f8f9fa; padding: 20px; border-radius: 6px; 
+            margin-top: 20px; 
+        }
+        .data-section pre { 
+            background: white; padding: 15px; border-radius: 4px; 
+            overflow-x: auto; font-size: 0.9em; 
+        }
+        
+        .button-analysis { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 15px; margin: 15px 0; 
+        }
+        .button-item { 
+            background: #e9ecef; padding: 10px; border-radius: 4px; 
+            font-family: monospace; font-size: 0.9em; 
+        }
+        
+        @media (max-width: 768px) {
+            .score-overview { grid-template-columns: 1fr 1fr; }
+            .metric-grid { grid-template-columns: 1fr; }
+            .screenshots { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎨 Simplified Projects Section Analysis</h1>
+            <p>Comprehensive analysis of the project section design simplification</p>
+            <p><strong>Analyzed:</strong> 27/07/2025 08:43:44</p>
+            <p><strong>URL:</strong> http://localhost:5181</p>
+        </div>
+
+        <div class="score-overview">
+            <div class="score-card">
+                <div class="score-value">51%</div>
+                <div class="score-label">Overall Score</div>
+            </div>
+            <div class="score-card">
+                <div class="score-value">40%</div>
+                <div class="score-label">Simplicity</div>
+            </div>
+            <div class="score-card">
+                <div class="score-value">50%</div>
+                <div class="score-label">Functionality</div>
+            </div>
+            <div class="score-card">
+                <div class="score-value">40%</div>
+                <div class="score-label">Design Quality</div>
+            </div>
+            <div class="score-card">
+                <div class="score-value">75%</div>
+                <div class="score-label">User Experience</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📊 Quick Summary</h2>
+            <div class="metric-grid">
+                <div class="metric">
+                    <div class="metric-label">Project Cards Found</div>
+                    <div class="metric-value">106</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Design Complexity</div>
+                    <div class="metric-value status-good">simple</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Visit Buttons Working</div>
+                    <div class="metric-value status-error">
+                        ❌ No
+                    </div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Visual Clutter</div>
+                    <div class="metric-value status-error">
+                        ❌ Detected
+                    </div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Hover Effects</div>
+                    <div class="metric-value">0 / 13</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Clean Layout</div>
+                    <div class="metric-value status-warning">
+                        ⚠️ Needs work
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎨 Design Simplicity Analysis</h2>
+            <p><strong>Complexity Level:</strong> 
+                <span class="status-good">simple</span>
+            </p>
+            <p><strong>Visual Clutter:</strong> 
+                <span class="status-error">
+                    Detected - Needs simplification
+                </span>
+            </p>
+            <p><strong>Layout Quality:</strong> 
+                <span class="status-warning">
+                    Could be improved ⚠️
+                </span>
+            </p>
+            
+                <p><strong>Average elements per card:</strong> 2</p>
+            
+        </div>
+
+        <div class="section">
+            <h2>🔗 Visit Buttons Analysis</h2>
+            <div class="metric-grid">
+                <div class="metric">
+                    <div class="metric-label">Total Visit Buttons</div>
+                    <div class="metric-value">4</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">All Buttons Working</div>
+                    <div class="metric-value status-error">
+                        ❌ No
+                    </div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Simple Design</div>
+                    <div class="metric-value status-good">
+                        ✅ Yes
+                    </div>
+                </div>
+            </div>
+            
+                <p><strong>Button texts found:</strong></p>
+                <div class="button-analysis">
+                    <div class="button-item">"Visit"</div><div class="button-item">"Visit"</div><div class="button-item">"Visit"</div><div class="button-item">"Visit"</div>
+                </div>
+            
+        </div>
+
+        <div class="section">
+            <h2>✨ Hover Effects Analysis</h2>
+            <p><strong>Cards with hover effects:</strong> 0 out of 13 tested</p>
+            <p><strong>Effects quality:</strong> 
+                <span class="status-good">
+                    Subtle and appropriate ✅
+                </span>
+            </p>
+            
+                <div class="metric-grid">
+                    
+                        <div class="metric">
+                            <div class="metric-label">Card 1</div>
+                            <div class="metric-value status-warning">
+                                ⚠️ No hover effect
+                            </div>
+                        </div>
+                    
+                        <div class="metric">
+                            <div class="metric-label">Card 2</div>
+                            <div class="metric-value status-warning">
+                                ⚠️ No hover effect
+                            </div>
+                        </div>
+                    
+                        <div class="metric">
+                            <div class="metric-label">Card 3</div>
+                            <div class="metric-value status-warning">
+                                ⚠️ No hover effect
+                            </div>
+                        </div>
+                    
+                </div>
+            
+        </div>
+
+        <div class="section">
+            <h2>🧹 Clean Design Assessment</h2>
+            <div class="metric-grid">
+                <div class="metric">
+                    <div class="metric-label">Design is Minimal</div>
+                    <div class="metric-value status-good">
+                        ✅ Yes
+                    </div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Total Elements</div>
+                    <div class="metric-value">65</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Adequate Padding</div>
+                    <div class="metric-value status-warning">
+                        ⚠️ Needs improvement
+                    </div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Section Found</div>
+                    <div class="metric-value status-good">
+                        ✅ Yes
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>👤 User-Friendliness Assessment</h2>
+            <div class="metric-grid">
+                <div class="metric">
+                    <div class="metric-label">Overall Score</div>
+                    <div class="metric-value status-warning">75%</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Clear Call-to-Actions</div>
+                    <div class="metric-value">0</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Images with Alt Text</div>
+                    <div class="metric-value">16 / 16</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Font Sizes Appropriate</div>
+                    <div class="metric-value status-good">
+                        ✅ Yes
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="section">
+            <h2>⚠️ Issues Found</h2>
+            <div class="issue">❌ Visual clutter detected - reduce number of elements per card</div><div class="issue">❌ Some Visit buttons are not properly functional</div>
+        </div>
+        
+
+        
+        <div class="section">
+            <h2>💡 Improvements & Observations</h2>
+            <div class="improvement">💡 Consider further simplifying the card design</div><div class="improvement">💡 Improve button functionality and design</div><div class="improvement">💡 Consider adding subtle hover effects for better user interaction</div>
+        </div>
+        
+
+        
+
+        
+        <div class="section">
+            <h2>📸 Screenshots Captured</h2>
+            <div class="screenshots">
+                
+                    <div class="screenshot">
+                        <h4>Full Page Initial</h4>
+                        <img src="full-page-initial.png" alt="full-page-initial.png" loading="lazy" />
+                    </div>
+                
+                    <div class="screenshot">
+                        <h4>Projects Section Focused</h4>
+                        <img src="projects-section-focused.png" alt="projects-section-focused.png" loading="lazy" />
+                    </div>
+                
+                    <div class="screenshot">
+                        <h4>Projects Hover State</h4>
+                        <img src="projects-hover-state.png" alt="projects-hover-state.png" loading="lazy" />
+                    </div>
+                
+                    <div class="screenshot">
+                        <h4>Final Full Page</h4>
+                        <img src="final-full-page.png" alt="final-full-page.png" loading="lazy" />
+                    </div>
+                
+            </div>
+        </div>
+        
+
+        <div class="section">
+            <h2>📋 Detailed Analysis Data</h2>
+            <div class="data-section">
+                <h3>Raw Analysis Results</h3>
+                <pre>{
+  "designSimplicity": {
+    "totalCards": 106,
+    "cardElements": [
+      {
+        "index": 0,
+        "className": "col-span-1 p-10 bg-black border border-white border-opacity-10 rounded-xl testimonial-card",
+        "childrenCount": 3,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "Gueya Oudjit turned our vision into a stunning, functional platform that our customers love. Their c",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "12px",
+          "boxShadow": "none",
+          "padding": "40px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 1,
+        "className": "col-span-1 p-10 bg-black border border-white border-opacity-10 rounded-xl testimonial-card",
+        "childrenCount": 3,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "Gueya consistently brings fresh ideas and innovative solutions. Their passion for creativity and att",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "12px",
+          "boxShadow": "none",
+          "padding": "40px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 2,
+        "className": "col-span-1 p-10 bg-black border border-white border-opacity-10 rounded-xl testimonial-card",
+        "childrenCount": 3,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "Exceeded my expectations with a unique and beautifully designed product that works flawlessly. Gueya",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "12px",
+          "boxShadow": "none",
+          "padding": "40px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 3,
+        "className": "col-span-1 p-10 bg-black border border-white border-opacity-10 rounded-xl testimonial-card",
+        "childrenCount": 3,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "Gueya blends technical skills with bold creativity to deliver exceptional results. They push boundar",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "12px",
+          "boxShadow": "none",
+          "padding": "40px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 4,
+        "className": "md:col-span-7 col-span-12 row-span-5",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "Gueya OudjitI am a passionate full-stack developer with expertise in modern web technologies, mobile",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 5,
+        "className": "md:col-span-6 col-span-12 row-span-3",
+        "childrenCount": 1,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "Web Design & DevCleanly Designed, Conversion-focused, and build for easy updates.",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 6,
+        "className": "md:col-span-6 col-span-12 row-span-3",
+        "childrenCount": 1,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "UX UI DesignSeamless web or mobile app design to wow your users.",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 7,
+        "className": "md:col-span-4 col-span-12 row-span-4",
+        "childrenCount": 1,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "BE YOURSELF!BE DIFFERENT!BUILD DIFFERENT!",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 8,
+        "className": "md:col-span-4 col-span-12 row-span-2",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasButtons": 1,
+        "buttonTypes": [
+          {
+            "text": "Facebook",
+            "type": "a",
+            "className": "bg-black rounded-2xl p-7 w-full h-full group cursor-pointer block",
+            "isVisitButton": false,
+            "href": "https://www.facebook.com/gueya.oudjit"
+          }
+        ],
+        "textContent": "Facebook",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 9,
+        "className": "md:col-span-4 col-span-12 row-span-2",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasButtons": 1,
+        "buttonTypes": [
+          {
+            "text": "Instagram",
+            "type": "a",
+            "className": "bg-black rounded-2xl p-7 w-full h-full group cursor-pointer block",
+            "isVisitButton": false,
+            "href": "https://www.instagram.com/gueya.oudjit"
+          }
+        ],
+        "textContent": "Instagram",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 10,
+        "className": "md:col-span-4 col-span-12 row-span-2",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasButtons": 1,
+        "buttonTypes": [
+          {
+            "text": "LinkedIn",
+            "type": "a",
+            "className": "bg-black rounded-2xl p-7 w-full h-full group cursor-pointer block",
+            "isVisitButton": false,
+            "href": "https://www.linkedin.com/in/gueya-oudjit"
+          }
+        ],
+        "textContent": "LinkedIn",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 11,
+        "className": "md:col-span-4 col-span-12 row-span-2",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasButtons": 1,
+        "buttonTypes": [
+          {
+            "text": "WhatsApp",
+            "type": "a",
+            "className": "bg-black rounded-2xl p-7 w-full h-full group cursor-pointer block",
+            "isVisitButton": false,
+            "href": "https://wa.me/213795897067"
+          }
+        ],
+        "textContent": "WhatsApp",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 12,
+        "className": "md:col-span-6 col-span-12 md:order-none order-1 relative z-10",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasButtons": 3,
+        "buttonTypes": [
+          {
+            "text": "Send Message",
+            "type": "button",
+            "className": "group relative w-full py-4 bg-gradient-to-r from-white to-gray-100 text-black font-semibold rounded-lg hover:from-gray-100 hover:to-white transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none overflow-hidden",
+            "isVisitButton": false,
+            "href": null
+          },
+          {
+            "text": "",
+            "type": "a",
+            "className": "p-2 bg-white bg-opacity-10 rounded-lg hover:bg-opacity-20 transition-all duration-300 group",
+            "isVisitButton": false,
+            "href": "#"
+          },
+          {
+            "text": "",
+            "type": "a",
+            "className": "p-2 bg-white bg-opacity-10 rounded-lg hover:bg-opacity-20 transition-all duration-300 group",
+            "isVisitButton": false,
+            "href": "#"
+          }
+        ],
+        "textContent": "Get In TouchFull Name *Email Address *Subject *Message *Send MessageContact Informationgaiaoudjit@gm",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 13,
+        "className": "md:flex items-center gap-7 hidden",
+        "childrenCount": 5,
+        "hasImage": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 5,
+        "buttonTypes": [
+          {
+            "text": "Home",
+            "type": "a",
+            "className": "gradient-title text-lg",
+            "isVisitButton": false,
+            "href": "#home"
+          },
+          {
+            "text": "About",
+            "type": "a",
+            "className": "gradient-title text-lg",
+            "isVisitButton": false,
+            "href": "#about"
+          },
+          {
+            "text": "Projects",
+            "type": "a",
+            "className": "gradient-title text-lg",
+            "isVisitButton": false,
+            "href": "#projects"
+          },
+          {
+            "text": "Testimonials",
+            "type": "a",
+            "className": "gradient-title text-lg",
+            "isVisitButton": false,
+            "href": "#testimonials"
+          },
+          {
+            "text": "Contact",
+            "type": "a",
+            "className": "gradient-title text-lg",
+            "isVisitButton": false,
+            "href": "#contact"
+          }
+        ],
+        "textContent": "HomeAboutProjectsTestimonialsContact",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 14,
+        "className": "side-bar-item opacity-0 cursor-pointer hover:underline transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 1,
+        "buttonTypes": [
+          {
+            "text": "Home",
+            "type": "a",
+            "className": "gradient-title text-2xl font-bold",
+            "isVisitButton": false,
+            "href": "#home"
+          }
+        ],
+        "textContent": "Home",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 15,
+        "className": "side-bar-item opacity-0 cursor-pointer hover:underline transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 1,
+        "buttonTypes": [
+          {
+            "text": "About",
+            "type": "a",
+            "className": "gradient-title text-2xl font-bold",
+            "isVisitButton": false,
+            "href": "#about"
+          }
+        ],
+        "textContent": "About",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 16,
+        "className": "side-bar-item opacity-0 cursor-pointer hover:underline transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 1,
+        "buttonTypes": [
+          {
+            "text": "Projects",
+            "type": "a",
+            "className": "gradient-title text-2xl font-bold",
+            "isVisitButton": false,
+            "href": "#projects"
+          }
+        ],
+        "textContent": "Projects",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 17,
+        "className": "side-bar-item opacity-0 cursor-pointer hover:underline transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 1,
+        "buttonTypes": [
+          {
+            "text": "Testimonials",
+            "type": "a",
+            "className": "gradient-title text-2xl font-bold",
+            "isVisitButton": false,
+            "href": "#testimonials"
+          }
+        ],
+        "textContent": "Testimonials",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 18,
+        "className": "side-bar-item opacity-0 cursor-pointer hover:underline transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 1,
+        "buttonTypes": [
+          {
+            "text": "Contact",
+            "type": "a",
+            "className": "gradient-title text-2xl font-bold",
+            "isVisitButton": false,
+            "href": "#contact"
+          }
+        ],
+        "textContent": "Contact",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 19,
+        "className": "flex flex-col items-center md:gap-5 gap-1",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "Explore",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 20,
+        "className": "flex flex-col items-end",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "DEVELOPER",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 21,
+        "className": "",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "About MePassionate Creator, Lifelong Learner",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 22,
+        "className": "items-center gap-7 hidden md:flex",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": false,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "01",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 23,
+        "className": "flex items-center md:gap-5",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "Facebook",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 24,
+        "className": "group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 25,
+        "className": "flex items-center md:gap-5",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "Instagram",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 26,
+        "className": "group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 27,
+        "className": "flex items-center md:gap-5",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "LinkedIn",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 28,
+        "className": "group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 29,
+        "className": "flex items-center md:gap-5",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "WhatsApp",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 30,
+        "className": "group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 31,
+        "className": "",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "TECH STACKMy Go-To Tools for Crafting Solutions",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 32,
+        "className": "items-center gap-7 hidden md:flex",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": false,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "02",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 33,
+        "className": "",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "Featured ProjectsExplore my latest work - interactive web applications built with modern technologie",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 34,
+        "className": "items-center gap-7 hidden md:flex",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": false,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "03",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 35,
+        "className": "slider-item w-[60vw] h-full flex-none relative group cursor-pointer overflow-hidden rounded-2xl",
+        "childrenCount": 3,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 1,
+        "buttonTypes": [
+          {
+            "text": "Visit",
+            "type": "button",
+            "className": "ml-4 bg-white text-black px-4 py-2 rounded-full font-medium text-sm hover:bg-gray-200 transition-colors duration-300 flex-shrink-0",
+            "isVisitButton": true,
+            "href": null
+          }
+        ],
+        "textContent": "Smart MenuDigital restaurant menu solution with interactive featuresVisit",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "16px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 36,
+        "className": "",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "Smart MenuDigital restaurant menu solution with interactive features",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 37,
+        "className": "slider-item w-[60vw] h-full flex-none relative group cursor-pointer overflow-hidden rounded-2xl",
+        "childrenCount": 3,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 1,
+        "buttonTypes": [
+          {
+            "text": "Visit",
+            "type": "button",
+            "className": "ml-4 bg-white text-black px-4 py-2 rounded-full font-medium text-sm hover:bg-gray-200 transition-colors duration-300 flex-shrink-0",
+            "isVisitButton": true,
+            "href": null
+          }
+        ],
+        "textContent": "SpyltModern web application with sleek design and functionalityVisit",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "16px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 38,
+        "className": "",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "SpyltModern web application with sleek design and functionality",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 39,
+        "className": "slider-item w-[60vw] h-full flex-none relative group cursor-pointer overflow-hidden rounded-2xl",
+        "childrenCount": 3,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 1,
+        "buttonTypes": [
+          {
+            "text": "Visit",
+            "type": "button",
+            "className": "ml-4 bg-white text-black px-4 py-2 rounded-full font-medium text-sm hover:bg-gray-200 transition-colors duration-300 flex-shrink-0",
+            "isVisitButton": true,
+            "href": null
+          }
+        ],
+        "textContent": "SherlockInvestigative platform with advanced search capabilitiesVisit",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "16px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 40,
+        "className": "",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "SherlockInvestigative platform with advanced search capabilities",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 41,
+        "className": "slider-item w-[60vw] h-full flex-none relative group cursor-pointer overflow-hidden rounded-2xl",
+        "childrenCount": 3,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 1,
+        "buttonTypes": [
+          {
+            "text": "Visit",
+            "type": "button",
+            "className": "ml-4 bg-white text-black px-4 py-2 rounded-full font-medium text-sm hover:bg-gray-200 transition-colors duration-300 flex-shrink-0",
+            "isVisitButton": true,
+            "href": null
+          }
+        ],
+        "textContent": "Suburbia SkateSkateboarding community platform with modern aestheticsVisit",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "16px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 42,
+        "className": "",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "Suburbia SkateSkateboarding community platform with modern aesthetics",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 43,
+        "className": "flex justify-center gap-3 flex-1",
+        "childrenCount": 4,
+        "hasImage": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 4,
+        "buttonTypes": [
+          {
+            "text": "",
+            "type": "button",
+            "className": "transition-all duration-300 w-8 h-2 bg-blue-400 rounded-full",
+            "isVisitButton": false,
+            "href": null
+          },
+          {
+            "text": "",
+            "type": "button",
+            "className": "transition-all duration-300 w-2 h-2 bg-white bg-opacity-30 rounded-full hover:bg-opacity-50",
+            "isVisitButton": false,
+            "href": null
+          },
+          {
+            "text": "",
+            "type": "button",
+            "className": "transition-all duration-300 w-2 h-2 bg-white bg-opacity-30 rounded-full hover:bg-opacity-50",
+            "isVisitButton": false,
+            "href": null
+          },
+          {
+            "text": "",
+            "type": "button",
+            "className": "transition-all duration-300 w-2 h-2 bg-white bg-opacity-30 rounded-full hover:bg-opacity-50",
+            "isVisitButton": false,
+            "href": null
+          }
+        ],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 44,
+        "className": "text-white-50 flex gap-5 md:-translate-x-32 -translate-x-5",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 45,
+        "className": "rounded-full cursor-pointer bg-black hover:bg-gray-800 hover:border-opacity-50 active:scale-90 transition-all duration-300 w-12 h-12 flex-center border-2 border-white border-opacity-30 shadow-lg",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "2px solid rgb(255, 255, 255)",
+          "borderRadius": "3.35544e+07px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 46,
+        "className": "rounded-full cursor-pointer bg-black hover:bg-gray-800 hover:border-opacity-50 active:scale-90 transition-all duration-300 w-12 h-12 flex-center border-2 border-white border-opacity-30 shadow-lg",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "2px solid rgb(255, 255, 255)",
+          "borderRadius": "3.35544e+07px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 47,
+        "className": "",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "TESTIMONIALSWatch our clients are saying about us",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 48,
+        "className": "items-center gap-7 hidden md:flex",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": false,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "03",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 49,
+        "className": "",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "John MillerFounder of ModernEdge Solutions",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 50,
+        "className": "flex items-center gap-3 md:mt-0 mt-5",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 51,
+        "className": "",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "Emily CarterUX Designer at PixelWorks Studio",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 52,
+        "className": "flex items-center gap-3 md:mt-0 mt-5",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 53,
+        "className": "",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "Sarah LopezEntrepreneur and Small Business Owner",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 54,
+        "className": "flex items-center gap-3 md:mt-0 mt-5",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 55,
+        "className": "",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "David ChenProject Manager at CreativeSphere Agency",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 56,
+        "className": "flex items-center gap-3 md:mt-0 mt-5",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 57,
+        "className": "",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "Let's Work TogetherReady to bring your ideas to life? Let's create something amazing together.",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 58,
+        "className": "items-center gap-7 hidden md:flex",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": false,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "04",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 59,
+        "className": "container md:my-10 my-5 flex items-center justify-between",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 5,
+        "buttonTypes": [
+          {
+            "text": "Home",
+            "type": "a",
+            "className": "gradient-title text-lg",
+            "isVisitButton": false,
+            "href": "#home"
+          },
+          {
+            "text": "About",
+            "type": "a",
+            "className": "gradient-title text-lg",
+            "isVisitButton": false,
+            "href": "#about"
+          },
+          {
+            "text": "Projects",
+            "type": "a",
+            "className": "gradient-title text-lg",
+            "isVisitButton": false,
+            "href": "#projects"
+          },
+          {
+            "text": "Testimonials",
+            "type": "a",
+            "className": "gradient-title text-lg",
+            "isVisitButton": false,
+            "href": "#testimonials"
+          },
+          {
+            "text": "Contact",
+            "type": "a",
+            "className": "gradient-title text-lg",
+            "isVisitButton": false,
+            "href": "#contact"
+          }
+        ],
+        "textContent": "HomeAboutProjectsTestimonialsContact",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "40px 0px"
+        }
+      },
+      {
+        "index": 60,
+        "className": "flex flex-col items-center gap-20",
+        "childrenCount": 5,
+        "hasImage": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 5,
+        "buttonTypes": [
+          {
+            "text": "Home",
+            "type": "a",
+            "className": "gradient-title text-2xl font-bold",
+            "isVisitButton": false,
+            "href": "#home"
+          },
+          {
+            "text": "About",
+            "type": "a",
+            "className": "gradient-title text-2xl font-bold",
+            "isVisitButton": false,
+            "href": "#about"
+          },
+          {
+            "text": "Projects",
+            "type": "a",
+            "className": "gradient-title text-2xl font-bold",
+            "isVisitButton": false,
+            "href": "#projects"
+          },
+          {
+            "text": "Testimonials",
+            "type": "a",
+            "className": "gradient-title text-2xl font-bold",
+            "isVisitButton": false,
+            "href": "#testimonials"
+          },
+          {
+            "text": "Contact",
+            "type": "a",
+            "className": "gradient-title text-2xl font-bold",
+            "isVisitButton": false,
+            "href": "#contact"
+          }
+        ],
+        "textContent": "HomeAboutProjectsTestimonialsContact",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 61,
+        "className": "flex justify-between items-end",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "ExploreDEVELOPER",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(255, 255, 255)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 62,
+        "className": "flex justify-between items-center",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "About MePassionate Creator, Lifelong Learner01",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 63,
+        "className": "flex justify-between items-center h-full",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "Facebook",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 64,
+        "className": "flex justify-between items-center h-full",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "Instagram",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 65,
+        "className": "flex justify-between items-center h-full",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "LinkedIn",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 66,
+        "className": "flex justify-between items-center h-full",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "WhatsApp",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 67,
+        "className": "flex justify-between items-center",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "TECH STACKMy Go-To Tools for Crafting Solutions02",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 68,
+        "className": "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "20px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 69,
+        "className": "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "20px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 70,
+        "className": "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "20px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 71,
+        "className": "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "20px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 72,
+        "className": "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "20px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 73,
+        "className": "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "20px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 74,
+        "className": "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "20px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 75,
+        "className": "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "20px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 76,
+        "className": "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "20px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 77,
+        "className": "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "20px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 78,
+        "className": "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "20px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 79,
+        "className": "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "20px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 80,
+        "className": "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "20px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 81,
+        "className": "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "20px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 82,
+        "className": "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "20px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 83,
+        "className": "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "20px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 84,
+        "className": "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "20px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 85,
+        "className": "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "20px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 86,
+        "className": "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "20px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 87,
+        "className": "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+        "childrenCount": 1,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgb(0, 0, 0)",
+          "border": "1px solid rgb(255, 255, 255)",
+          "borderRadius": "20px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 88,
+        "className": "flex justify-between items-center",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "Featured ProjectsExplore my latest work - interactive web applications built with modern technologie",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 89,
+        "className": "flex w-full lg:h-[60vh] md:h-[40vh] h-[60vh] items-center gap-[3vw]",
+        "childrenCount": 4,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 4,
+        "buttonTypes": [
+          {
+            "text": "Visit",
+            "type": "button",
+            "className": "ml-4 bg-white text-black px-4 py-2 rounded-full font-medium text-sm hover:bg-gray-200 transition-colors duration-300 flex-shrink-0",
+            "isVisitButton": true,
+            "href": null
+          },
+          {
+            "text": "Visit",
+            "type": "button",
+            "className": "ml-4 bg-white text-black px-4 py-2 rounded-full font-medium text-sm hover:bg-gray-200 transition-colors duration-300 flex-shrink-0",
+            "isVisitButton": true,
+            "href": null
+          },
+          {
+            "text": "Visit",
+            "type": "button",
+            "className": "ml-4 bg-white text-black px-4 py-2 rounded-full font-medium text-sm hover:bg-gray-200 transition-colors duration-300 flex-shrink-0",
+            "isVisitButton": true,
+            "href": null
+          },
+          {
+            "text": "Visit",
+            "type": "button",
+            "className": "ml-4 bg-white text-black px-4 py-2 rounded-full font-medium text-sm hover:bg-gray-200 transition-colors duration-300 flex-shrink-0",
+            "isVisitButton": true,
+            "href": null
+          }
+        ],
+        "textContent": "Smart MenuDigital restaurant menu solution with interactive featuresVisitSpyltModern web application",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 90,
+        "className": "flex items-end justify-between",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 1,
+        "buttonTypes": [
+          {
+            "text": "Visit",
+            "type": "button",
+            "className": "ml-4 bg-white text-black px-4 py-2 rounded-full font-medium text-sm hover:bg-gray-200 transition-colors duration-300 flex-shrink-0",
+            "isVisitButton": true,
+            "href": null
+          }
+        ],
+        "textContent": "Smart MenuDigital restaurant menu solution with interactive featuresVisit",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 91,
+        "className": "flex items-end justify-between",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 1,
+        "buttonTypes": [
+          {
+            "text": "Visit",
+            "type": "button",
+            "className": "ml-4 bg-white text-black px-4 py-2 rounded-full font-medium text-sm hover:bg-gray-200 transition-colors duration-300 flex-shrink-0",
+            "isVisitButton": true,
+            "href": null
+          }
+        ],
+        "textContent": "SpyltModern web application with sleek design and functionalityVisit",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 92,
+        "className": "flex items-end justify-between",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 1,
+        "buttonTypes": [
+          {
+            "text": "Visit",
+            "type": "button",
+            "className": "ml-4 bg-white text-black px-4 py-2 rounded-full font-medium text-sm hover:bg-gray-200 transition-colors duration-300 flex-shrink-0",
+            "isVisitButton": true,
+            "href": null
+          }
+        ],
+        "textContent": "SherlockInvestigative platform with advanced search capabilitiesVisit",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 93,
+        "className": "flex items-end justify-between",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 1,
+        "buttonTypes": [
+          {
+            "text": "Visit",
+            "type": "button",
+            "className": "ml-4 bg-white text-black px-4 py-2 rounded-full font-medium text-sm hover:bg-gray-200 transition-colors duration-300 flex-shrink-0",
+            "isVisitButton": true,
+            "href": null
+          }
+        ],
+        "textContent": "Suburbia SkateSkateboarding community platform with modern aestheticsVisit",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 94,
+        "className": "mt-10 flex items-center justify-between",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 4,
+        "buttonTypes": [
+          {
+            "text": "",
+            "type": "button",
+            "className": "transition-all duration-300 w-8 h-2 bg-blue-400 rounded-full",
+            "isVisitButton": false,
+            "href": null
+          },
+          {
+            "text": "",
+            "type": "button",
+            "className": "transition-all duration-300 w-2 h-2 bg-white bg-opacity-30 rounded-full hover:bg-opacity-50",
+            "isVisitButton": false,
+            "href": null
+          },
+          {
+            "text": "",
+            "type": "button",
+            "className": "transition-all duration-300 w-2 h-2 bg-white bg-opacity-30 rounded-full hover:bg-opacity-50",
+            "isVisitButton": false,
+            "href": null
+          },
+          {
+            "text": "",
+            "type": "button",
+            "className": "transition-all duration-300 w-2 h-2 bg-white bg-opacity-30 rounded-full hover:bg-opacity-50",
+            "isVisitButton": false,
+            "href": null
+          }
+        ],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "40px 0px 0px"
+        }
+      },
+      {
+        "index": 95,
+        "className": "flex justify-between items-center",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "TESTIMONIALSWatch our clients are saying about us03",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 96,
+        "className": "flex items-center justify-between",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 97,
+        "className": "flex md:flex-row flex-col md:items-center justify-between md:mt-20 mt-10",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "John MillerFounder of ModernEdge Solutions",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "80px 0px 0px"
+        }
+      },
+      {
+        "index": 98,
+        "className": "flex items-center justify-between",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 99,
+        "className": "flex md:flex-row flex-col md:items-center justify-between md:mt-20 mt-10",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "Emily CarterUX Designer at PixelWorks Studio",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "80px 0px 0px"
+        }
+      },
+      {
+        "index": 100,
+        "className": "flex items-center justify-between",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 101,
+        "className": "flex md:flex-row flex-col md:items-center justify-between md:mt-20 mt-10",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "Sarah LopezEntrepreneur and Small Business Owner",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "80px 0px 0px"
+        }
+      },
+      {
+        "index": 102,
+        "className": "flex items-center justify-between",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 103,
+        "className": "flex md:flex-row flex-col md:items-center justify-between md:mt-20 mt-10",
+        "childrenCount": 2,
+        "hasImage": true,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "David ChenProject Manager at CreativeSphere Agency",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "80px 0px 0px"
+        }
+      },
+      {
+        "index": 104,
+        "className": "flex justify-between items-center",
+        "childrenCount": 2,
+        "hasImage": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasButtons": 0,
+        "buttonTypes": [],
+        "textContent": "Let's Work TogetherReady to bring your ideas to life? Let's create something amazing together.04",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      },
+      {
+        "index": 105,
+        "className": "flex items-center md:gap-16 gap-8",
+        "childrenCount": 4,
+        "hasImage": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasButtons": 4,
+        "buttonTypes": [
+          {
+            "text": "",
+            "type": "a",
+            "className": "cursor-pointer hover:-translate-y-5 transition-all duration-700",
+            "isVisitButton": false,
+            "href": "https://www.facebook.com/gueya.oudjit"
+          },
+          {
+            "text": "",
+            "type": "a",
+            "className": "cursor-pointer hover:-translate-y-5 transition-all duration-700",
+            "isVisitButton": false,
+            "href": "https://www.instagram.com/gueya.oudjit"
+          },
+          {
+            "text": "",
+            "type": "a",
+            "className": "cursor-pointer hover:-translate-y-5 transition-all duration-700",
+            "isVisitButton": false,
+            "href": "https://www.linkedin.com/in/gueya-oudjit"
+          },
+          {
+            "text": "",
+            "type": "a",
+            "className": "cursor-pointer hover:-translate-y-5 transition-all duration-700",
+            "isVisitButton": false,
+            "href": "https://wa.me/213795897067"
+          }
+        ],
+        "textContent": "",
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(204, 204, 204)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "padding": "0px",
+          "margin": "0px"
+        }
+      }
+    ],
+    "designComplexity": "simple",
+    "visualClutter": true,
+    "cleanLayout": false,
+    "foundCardTypes": [
+      "col-span-1 p-10 bg-black border border-white border-opacity-10 rounded-xl testimonial-card",
+      "col-span-1 p-10 bg-black border border-white border-opacity-10 rounded-xl testimonial-card",
+      "col-span-1 p-10 bg-black border border-white border-opacity-10 rounded-xl testimonial-card",
+      "col-span-1 p-10 bg-black border border-white border-opacity-10 rounded-xl testimonial-card",
+      "md:col-span-7 col-span-12 row-span-5",
+      "md:col-span-6 col-span-12 row-span-3",
+      "md:col-span-6 col-span-12 row-span-3",
+      "md:col-span-4 col-span-12 row-span-4",
+      "md:col-span-4 col-span-12 row-span-2",
+      "md:col-span-4 col-span-12 row-span-2",
+      "md:col-span-4 col-span-12 row-span-2",
+      "md:col-span-4 col-span-12 row-span-2",
+      "md:col-span-6 col-span-12 md:order-none order-1 relative z-10",
+      "md:flex items-center gap-7 hidden",
+      "side-bar-item opacity-0 cursor-pointer hover:underline transition-all duration-700",
+      "side-bar-item opacity-0 cursor-pointer hover:underline transition-all duration-700",
+      "side-bar-item opacity-0 cursor-pointer hover:underline transition-all duration-700",
+      "side-bar-item opacity-0 cursor-pointer hover:underline transition-all duration-700",
+      "side-bar-item opacity-0 cursor-pointer hover:underline transition-all duration-700",
+      "flex flex-col items-center md:gap-5 gap-1",
+      "flex flex-col items-end",
+      "DIV",
+      "items-center gap-7 hidden md:flex",
+      "flex items-center md:gap-5",
+      "group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform",
+      "flex items-center md:gap-5",
+      "group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform",
+      "flex items-center md:gap-5",
+      "group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform",
+      "flex items-center md:gap-5",
+      "group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform",
+      "DIV",
+      "items-center gap-7 hidden md:flex",
+      "DIV",
+      "items-center gap-7 hidden md:flex",
+      "slider-item w-[60vw] h-full flex-none relative group cursor-pointer overflow-hidden rounded-2xl",
+      "DIV",
+      "slider-item w-[60vw] h-full flex-none relative group cursor-pointer overflow-hidden rounded-2xl",
+      "DIV",
+      "slider-item w-[60vw] h-full flex-none relative group cursor-pointer overflow-hidden rounded-2xl",
+      "DIV",
+      "slider-item w-[60vw] h-full flex-none relative group cursor-pointer overflow-hidden rounded-2xl",
+      "DIV",
+      "flex justify-center gap-3 flex-1",
+      "text-white-50 flex gap-5 md:-translate-x-32 -translate-x-5",
+      "rounded-full cursor-pointer bg-black hover:bg-gray-800 hover:border-opacity-50 active:scale-90 transition-all duration-300 w-12 h-12 flex-center border-2 border-white border-opacity-30 shadow-lg",
+      "rounded-full cursor-pointer bg-black hover:bg-gray-800 hover:border-opacity-50 active:scale-90 transition-all duration-300 w-12 h-12 flex-center border-2 border-white border-opacity-30 shadow-lg",
+      "DIV",
+      "items-center gap-7 hidden md:flex",
+      "DIV",
+      "flex items-center gap-3 md:mt-0 mt-5",
+      "DIV",
+      "flex items-center gap-3 md:mt-0 mt-5",
+      "DIV",
+      "flex items-center gap-3 md:mt-0 mt-5",
+      "DIV",
+      "flex items-center gap-3 md:mt-0 mt-5",
+      "DIV",
+      "items-center gap-7 hidden md:flex",
+      "container md:my-10 my-5 flex items-center justify-between",
+      "flex flex-col items-center gap-20",
+      "flex justify-between items-end",
+      "flex justify-between items-center",
+      "flex justify-between items-center h-full",
+      "flex justify-between items-center h-full",
+      "flex justify-between items-center h-full",
+      "flex justify-between items-center h-full",
+      "flex justify-between items-center",
+      "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+      "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+      "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+      "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+      "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+      "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+      "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+      "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+      "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+      "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+      "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+      "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+      "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+      "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+      "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+      "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+      "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+      "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+      "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+      "flex-none md:w-32 md:h-32 w-20 h-20 bg-black border border-white border-opacity-10 flex-center gradient-border marquee-item hover:-translate-y-3 transition-all duration-700",
+      "flex justify-between items-center",
+      "flex w-full lg:h-[60vh] md:h-[40vh] h-[60vh] items-center gap-[3vw]",
+      "flex items-end justify-between",
+      "flex items-end justify-between",
+      "flex items-end justify-between",
+      "flex items-end justify-between",
+      "mt-10 flex items-center justify-between",
+      "flex justify-between items-center",
+      "flex items-center justify-between",
+      "flex md:flex-row flex-col md:items-center justify-between md:mt-20 mt-10",
+      "flex items-center justify-between",
+      "flex md:flex-row flex-col md:items-center justify-between md:mt-20 mt-10",
+      "flex items-center justify-between",
+      "flex md:flex-row flex-col md:items-center justify-between md:mt-20 mt-10",
+      "flex items-center justify-between",
+      "flex md:flex-row flex-col md:items-center justify-between md:mt-20 mt-10",
+      "flex justify-between items-center",
+      "flex items-center md:gap-16 gap-8"
+    ]
+  },
+  "visitButtons": {
+    "totalVisitButtons": 4,
+    "buttons": [
+      {
+        "index": 14,
+        "text": "Visit",
+        "tagName": "button",
+        "href": null,
+        "hasHref": false,
+        "isWorking": false,
+        "target": null,
+        "styles": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border": "0px solid rgb(0, 0, 0)",
+          "borderRadius": "3.35544e+07px",
+          "padding": "8px 16px",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "index": 15,
+        "text": "Visit",
+        "tagName": "button",
+        "href": null,
+        "hasHref": false,
+        "isWorking": false,
+        "target": null,
+        "styles": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border": "0px solid rgb(0, 0, 0)",
+          "borderRadius": "3.35544e+07px",
+          "padding": "8px 16px",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "index": 16,
+        "text": "Visit",
+        "tagName": "button",
+        "href": null,
+        "hasHref": false,
+        "isWorking": false,
+        "target": null,
+        "styles": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border": "0px solid rgb(0, 0, 0)",
+          "borderRadius": "3.35544e+07px",
+          "padding": "8px 16px",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        }
+      },
+      {
+        "index": 17,
+        "text": "Visit",
+        "tagName": "button",
+        "href": null,
+        "hasHref": false,
+        "isWorking": false,
+        "target": null,
+        "styles": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border": "0px solid rgb(0, 0, 0)",
+          "borderRadius": "3.35544e+07px",
+          "padding": "8px 16px",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        }
+      }
+    ],
+    "allButtonsWorking": false,
+    "hasSimpleDesign": true,
+    "buttonTexts": [
+      "Visit",
+      "Visit",
+      "Visit",
+      "Visit"
+    ]
+  },
+  "hoverEffects": {
+    "totalCards": 13,
+    "cardsWithHoverEffects": 0,
+    "hoverDetails": [
+      {
+        "cardIndex": 0,
+        "hasEffect": false,
+        "changes": {
+          "transform": false,
+          "boxShadow": false,
+          "scale": false,
+          "opacity": false,
+          "backgroundColor": false
+        },
+        "initialStyles": {
+          "transform": "none",
+          "boxShadow": "none",
+          "scale": "none",
+          "opacity": "1",
+          "backgroundColor": "rgb(0, 0, 0)"
+        },
+        "hoverStyles": {
+          "transform": "none",
+          "boxShadow": "none",
+          "scale": "none",
+          "opacity": "1",
+          "backgroundColor": "rgb(0, 0, 0)"
+        }
+      },
+      {
+        "cardIndex": 1,
+        "hasEffect": false,
+        "changes": {
+          "transform": false,
+          "boxShadow": false,
+          "scale": false,
+          "opacity": false,
+          "backgroundColor": false
+        },
+        "initialStyles": {
+          "transform": "matrix(1, 0, 0, 1, 0, 70)",
+          "boxShadow": "none",
+          "scale": "none",
+          "opacity": "1",
+          "backgroundColor": "rgb(0, 0, 0)"
+        },
+        "hoverStyles": {
+          "transform": "matrix(1, 0, 0, 1, 0, 70)",
+          "boxShadow": "none",
+          "scale": "none",
+          "opacity": "1",
+          "backgroundColor": "rgb(0, 0, 0)"
+        }
+      },
+      {
+        "cardIndex": 2,
+        "hasEffect": false,
+        "changes": {
+          "transform": false,
+          "boxShadow": false,
+          "scale": false,
+          "opacity": false,
+          "backgroundColor": false
+        },
+        "initialStyles": {
+          "transform": "none",
+          "boxShadow": "none",
+          "scale": "none",
+          "opacity": "1",
+          "backgroundColor": "rgb(0, 0, 0)"
+        },
+        "hoverStyles": {
+          "transform": "none",
+          "boxShadow": "none",
+          "scale": "none",
+          "opacity": "1",
+          "backgroundColor": "rgb(0, 0, 0)"
+        }
+      }
+    ],
+    "subtleEffects": true
+  },
+  "cleanDesign": {
+    "sectionFound": true,
+    "sectionStyles": {
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "gap": "normal"
+    },
+    "layout": {
+      "displayType": "flex",
+      "flexDirection": "row",
+      "gap": "normal",
+      "gridTemplate": "none"
+    },
+    "childrenCount": 3,
+    "hasTitle": true,
+    "hasSubtitle": true,
+    "totalElements": 65,
+    "isMinimal": true,
+    "whitespace": {
+      "hasAdequatePadding": false,
+      "hasCleanMargins": false
+    }
+  },
+  "userFriendliness": {
+    "totalCardsAnalyzed": 4,
+    "readability": {
+      "hasReadableFonts": true,
+      "hasGoodContrast": true,
+      "appropriateFontSizes": true,
+      "fontSizeIssues": []
+    },
+    "navigation": {
+      "clearCallToActions": 0,
+      "totalInteractiveElements": 0,
+      "callToActionTexts": []
+    },
+    "accessibility": {
+      "hasAltTexts": 16,
+      "hasAriaLabels": 0,
+      "totalImages": 16,
+      "missingAltImages": []
+    },
+    "overallScore": 75
+  },
+  "overallAssessment": {
+    "simplicityScore": 40,
+    "functionalityScore": 50,
+    "designQualityScore": 40,
+    "userExperienceScore": 75,
+    "finalScore": 51,
+    "recommendations": []
+  }
+}</pre>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+    

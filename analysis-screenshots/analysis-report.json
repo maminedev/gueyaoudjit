@@ -1,0 +1,155 @@
+{
+  "timestamp": "2025-07-26T14:40:46.092Z",
+  "url": "http://localhost:5175",
+  "summary": {
+    "totalIssues": 6,
+    "criticalIssues": 1,
+    "mediumIssues": 5,
+    "lowIssues": 0,
+    "screenshotsCaptured": 8
+  },
+  "performanceMetrics": {
+    "jsHeapUsedSize": 31132452,
+    "jsHeapTotalSize": 43950080,
+    "navigationEntries": [
+      {
+        "name": "http://localhost:5175/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 2130.9000000059605,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "workerStart": 0,
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 6.5,
+        "domainLookupStart": 6.5,
+        "domainLookupEnd": 6.5,
+        "connectStart": 6.5,
+        "secureConnectionStart": 0,
+        "connectEnd": 6.5,
+        "requestStart": 526.7999999821186,
+        "responseStart": 534.9000000059605,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 534.9000000059605,
+        "responseEnd": 535.5999999940395,
+        "transferSize": 978,
+        "encodedBodySize": 678,
+        "decodedBodySize": 678,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 611.9000000059605,
+        "domContentLoadedEventStart": 2126.7999999821186,
+        "domContentLoadedEventEnd": 2127,
+        "domComplete": 2130.9000000059605,
+        "loadEventStart": 2130.9000000059605,
+        "loadEventEnd": 2130.9000000059605,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null
+      }
+    ]
+  },
+  "issues": [
+    {
+      "type": "3D Model Issue",
+      "severity": "high",
+      "message": "No WebGL canvas detected - 3D models may not be loading",
+      "location": "3D Models"
+    },
+    {
+      "type": "Layout Issue",
+      "severity": "medium",
+      "message": "Horizontal scrollbar detected on mobile",
+      "location": "mobile viewport"
+    },
+    {
+      "type": "Layout Issue",
+      "severity": "medium",
+      "message": "Horizontal scrollbar detected on tablet",
+      "location": "tablet viewport"
+    },
+    {
+      "type": "Layout Issue",
+      "severity": "medium",
+      "message": "Horizontal scrollbar detected on desktop",
+      "location": "desktop viewport"
+    },
+    {
+      "type": "Missing Section",
+      "severity": "medium",
+      "message": "Could not find Tech Stack section",
+      "location": "Page Structure"
+    },
+    {
+      "type": "Loading Issue",
+      "severity": "medium",
+      "message": "Loading indicator still visible - possible stuck loading state",
+      "location": "3D Models"
+    }
+  ],
+  "screenshots": [
+    {
+      "device": "mobile",
+      "type": "full-page",
+      "path": "analysis-screenshots\\mobile-full-page.png"
+    },
+    {
+      "device": "tablet",
+      "type": "full-page",
+      "path": "analysis-screenshots\\tablet-full-page.png"
+    },
+    {
+      "device": "desktop",
+      "type": "full-page",
+      "path": "analysis-screenshots\\desktop-full-page.png"
+    },
+    {
+      "section": "Hero",
+      "type": "section",
+      "path": "analysis-screenshots\\section-hero.png"
+    },
+    {
+      "section": "About",
+      "type": "section",
+      "path": "analysis-screenshots\\section-about.png"
+    },
+    {
+      "section": "Projects",
+      "type": "section",
+      "path": "analysis-screenshots\\section-projects.png"
+    },
+    {
+      "section": "Testimonials",
+      "type": "section",
+      "path": "analysis-screenshots\\section-testimonials.png"
+    },
+    {
+      "section": "Contact",
+      "type": "section",
+      "path": "analysis-screenshots\\section-contact.png"
+    }
+  ],
+  "recommendations": [
+    {
+      "category": "Responsive Design",
+      "priority": "Medium",
+      "issue": "Horizontal scroll or layout issues on mobile",
+      "solution": "Use CSS Grid/Flexbox with proper overflow handling and responsive units.",
+      "codeExample": "\n.container {\n  max-width: 100%;\n  overflow-x: hidden;\n  padding: 0 1rem;\n}\n\n@media (max-width: 768px) {\n  .grid {\n    grid-template-columns: 1fr;\n    gap: 1rem;\n  }\n}\n        "
+    },
+    {
+      "category": "3D Performance",
+      "priority": "High",
+      "issue": "3D models not loading or performing poorly",
+      "solution": "Implement proper loading states, error handling, and optimize model sizes.",
+      "codeExample": "\n// Add loading state management\nconst [modelLoaded, setModelLoaded] = useState(false);\nconst [modelError, setModelError] = useState(false);\n\n<Suspense fallback={<Loader />}>\n  <Model \n    onLoad={() => setModelLoaded(true)}\n    onError={() => setModelError(true)}\n  />\n</Suspense>\n        "
+    }
+  ]
+}

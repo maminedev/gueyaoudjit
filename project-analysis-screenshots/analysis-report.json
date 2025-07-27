@@ -1,0 +1,85 @@
+{
+  "timestamp": "2025-07-27T06:14:27.726Z",
+  "url": "http://localhost:5179",
+  "issues": [
+    {
+      "type": "visibility",
+      "severity": "high",
+      "description": "First project is not fully visible in the initial view",
+      "details": {
+        "firstProjectLeft": -825.59375,
+        "viewportWidth": 1920
+      }
+    },
+    {
+      "type": "mobile",
+      "severity": "high",
+      "description": "First project not visible on mobile view",
+      "details": {
+        "left": -161.25,
+        "width": 225,
+        "visible": false
+      }
+    },
+    {
+      "type": "overflow",
+      "severity": "medium",
+      "description": "Horizontal scroll detected",
+      "details": {
+        "bodyOverflowX": "hidden",
+        "htmlOverflowX": "hidden",
+        "bodyScrollWidth": 1582,
+        "bodyClientWidth": 768,
+        "horizontalScrollExists": true
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "positioning",
+      "priority": "high",
+      "title": "Fix Initial Carousel Positioning",
+      "description": "The carousel is positioned with -left-[43vw] which pushes the first project off-screen. Consider reducing this value to ensure the first project is visible.",
+      "technicalDetails": {
+        "currentValue": "-left-[43vw] (approximately -43% of viewport width)",
+        "suggestedValue": "-left-[20vw] or -left-[25vw]",
+        "affectedClass": "absolute w-full -left-[43vw] top-0"
+      },
+      "codeLocation": "src/components/Carousel.jsx:39"
+    },
+    {
+      "type": "layout",
+      "priority": "medium",
+      "title": "Improve Responsive Design",
+      "description": "Ensure consistent visibility across all device sizes by adjusting the carousel positioning for mobile and tablet views.",
+      "technicalDetails": {
+        "suggestion": "Add responsive classes like sm:-left-[30vw] md:-left-[35vw] lg:-left-[43vw]"
+      }
+    },
+    {
+      "type": "ux",
+      "priority": "medium",
+      "title": "Add Visual Indicators",
+      "description": "Consider adding dots or progress indicators to show which project is currently active and total number of projects.",
+      "technicalDetails": {
+        "implementation": "Add a dots component below the carousel that updates based on currentSlide state"
+      }
+    },
+    {
+      "type": "animation",
+      "priority": "low",
+      "title": "Smooth Initial Load",
+      "description": "Add initial animation to smoothly reveal the first project when the section comes into view.",
+      "technicalDetails": {
+        "suggestion": "Use GSAP ScrollTrigger to animate the carousel in when the projects section becomes visible"
+      }
+    }
+  ],
+  "screenshots": [
+    "projects-section-desktop.png",
+    "projects-after-next-click.png",
+    "projects-after-prev-click.png",
+    "projects-mobile.png",
+    "projects-tablet.png"
+  ]
+}

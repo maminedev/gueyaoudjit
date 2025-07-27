@@ -1,0 +1,110 @@
+{
+  "timestamp": "2025-07-27T11:04:23.509Z",
+  "url": "http://localhost:5182",
+  "projectImages": {
+    "totalExpected": 4,
+    "loadingCorrectly": 3,
+    "details": [
+      {
+        "index": 1,
+        "src": "http://localhost:5182/project/project1.png",
+        "alt": "Smart Menu",
+        "isLoaded": true,
+        "isVisible": true,
+        "naturalWidth": 1366,
+        "naturalHeight": 606,
+        "displayWidth": 820,
+        "displayHeight": 385
+      },
+      {
+        "index": 2,
+        "src": "http://localhost:5182/project/project2.png",
+        "alt": "Spylt",
+        "isLoaded": true,
+        "isVisible": true,
+        "naturalWidth": 1364,
+        "naturalHeight": 606,
+        "displayWidth": 820,
+        "displayHeight": 385
+      },
+      {
+        "index": 3,
+        "src": "http://localhost:5182/project/project3.png",
+        "alt": "Sherlock",
+        "isLoaded": true,
+        "isVisible": true,
+        "naturalWidth": 1366,
+        "naturalHeight": 608,
+        "displayWidth": 820,
+        "displayHeight": 385
+      },
+      {
+        "index": 4,
+        "src": "http://localhost:5182/project/project4.png",
+        "alt": "Suburbia Skate",
+        "isLoaded": false,
+        "isVisible": true,
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "displayWidth": 820,
+        "displayHeight": 385
+      }
+    ]
+  },
+  "navigationArrows": {
+    "bottom": {
+      "found": true,
+      "visible": true,
+      "prominent": true,
+      "dots": {
+        "count": 4,
+        "visible": 4,
+        "clickable": true
+      }
+    }
+  },
+  "arrowFunctionality": {
+    "leftArrowWorks": false,
+    "rightArrowWorks": false,
+    "dotsWork": false,
+    "navigationSmooth": false
+  },
+  "hoverEffects": {
+    "arrowsVisibleOnHover": false,
+    "arrowsMoreProminent": false,
+    "details": [
+      {
+        "arrow": "right",
+        "opacityChanged": false,
+        "backgroundChanged": false,
+        "moreVisible": false
+      },
+      {
+        "arrow": "left",
+        "opacityChanged": false,
+        "backgroundChanged": false,
+        "moreVisible": false
+      }
+    ]
+  },
+  "visibilityImprovement": {
+    "arrowsHighlyVisible": false,
+    "muchMoreVisibleThanBefore": false,
+    "prominentDesign": false
+  },
+  "screenshots": [
+    "projects-initial-state.png",
+    "navigation-elements-visible.png",
+    "after-right-arrow-click.png",
+    "after-left-arrow-click.png",
+    "arrows-hover-state.png",
+    "project-slide-1-with-navigation.png",
+    "project-slide-2-with-navigation.png",
+    "project-slide-3-with-navigation.png",
+    "project-slide-4-with-navigation.png"
+  ],
+  "issues": [],
+  "improvements": [],
+  "success": [],
+  "error": "Cannot read properties of undefined (reading 'visible')"
+}

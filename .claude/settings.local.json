@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "Bash(npm run lint)",
+      "Bash(npm install:*)",
+      "Bash(npm search \"mcp context\")",
+      "Bash(npm search:*)",
+      "Bash(mcp-context-manager:*)",
+      "Bash(puppeteer-mcp:*)",
+      "Bash(curl:*)",
+      "Bash(node:*)",
+      "Bash(rm:*)",
+      "Bash(del:*)",
+      "Bash(npm run dev:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": []
+  }
+}

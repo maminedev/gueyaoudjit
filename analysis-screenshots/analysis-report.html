@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Analysis Report</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 0; padding: 2rem; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header { border-bottom: 2px solid #000; padding-bottom: 1rem; margin-bottom: 2rem; }
+        .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .metric { background: #f8f9fa; padding: 1rem; border-radius: 4px; text-align: center; }
+        .metric-value { font-size: 2rem; font-weight: bold; color: #000; }
+        .metric-label { color: #666; font-size: 0.9rem; }
+        .section { margin-bottom: 2rem; }
+        .issue { border-left: 4px solid #ccc; padding: 1rem; margin: 0.5rem 0; background: #f8f9fa; }
+        .issue.high { border-color: #dc3545; }
+        .issue.medium { border-color: #ffc107; }
+        .issue.low { border-color: #28a745; }
+        .issue-type { font-weight: bold; color: #000; }
+        .issue-message { margin: 0.5rem 0; }
+        .issue-location { font-size: 0.9rem; color: #666; }
+        .screenshots { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; }
+        .screenshot { text-align: center; }
+        .screenshot img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+        .recommendation { background: #e3f2fd; padding: 1rem; margin: 1rem 0; border-radius: 4px; }
+        .code-example { background: #f5f5f5; padding: 1rem; border-radius: 4px; font-family: monospace; font-size: 0.9rem; overflow-x: auto; }
+        h1, h2, h3 { color: #000; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Portfolio Analysis Report</h1>
+            <p>Generated: 2025-07-26T14:40:46.092Z</p>
+            <p>URL: http://localhost:5175</p>
+        </div>
+        
+        <div class="section">
+            <h2>Summary</h2>
+            <div class="summary">
+                <div class="metric">
+                    <div class="metric-value">6</div>
+                    <div class="metric-label">Total Issues</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" style="color: #dc3545">1</div>
+                    <div class="metric-label">Critical Issues</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" style="color: #ffc107">5</div>
+                    <div class="metric-label">Medium Issues</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" style="color: #28a745">0</div>
+                    <div class="metric-label">Low Issues</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">8</div>
+                    <div class="metric-label">Screenshots</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Issues Found</h2>
+            
+                <div class="issue high">
+                    <div class="issue-type">3D Model Issue</div>
+                    <div class="issue-message">No WebGL canvas detected - 3D models may not be loading</div>
+                    <div class="issue-location">Location: 3D Models</div>
+                </div>
+            
+                <div class="issue medium">
+                    <div class="issue-type">Layout Issue</div>
+                    <div class="issue-message">Horizontal scrollbar detected on mobile</div>
+                    <div class="issue-location">Location: mobile viewport</div>
+                </div>
+            
+                <div class="issue medium">
+                    <div class="issue-type">Layout Issue</div>
+                    <div class="issue-message">Horizontal scrollbar detected on tablet</div>
+                    <div class="issue-location">Location: tablet viewport</div>
+                </div>
+            
+                <div class="issue medium">
+                    <div class="issue-type">Layout Issue</div>
+                    <div class="issue-message">Horizontal scrollbar detected on desktop</div>
+                    <div class="issue-location">Location: desktop viewport</div>
+                </div>
+            
+                <div class="issue medium">
+                    <div class="issue-type">Missing Section</div>
+                    <div class="issue-message">Could not find Tech Stack section</div>
+                    <div class="issue-location">Location: Page Structure</div>
+                </div>
+            
+                <div class="issue medium">
+                    <div class="issue-type">Loading Issue</div>
+                    <div class="issue-message">Loading indicator still visible - possible stuck loading state</div>
+                    <div class="issue-location">Location: 3D Models</div>
+                </div>
+            
+        </div>
+        
+        <div class="section">
+            <h2>Recommendations</h2>
+            
+                <div class="recommendation">
+                    <h3>Responsive Design (Medium Priority)</h3>
+                    <p><strong>Issue:</strong> Horizontal scroll or layout issues on mobile</p>
+                    <p><strong>Solution:</strong> Use CSS Grid/Flexbox with proper overflow handling and responsive units.</p>
+                    <div class="code-example">
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+        </div>
+                </div>
+            
+                <div class="recommendation">
+                    <h3>3D Performance (High Priority)</h3>
+                    <p><strong>Issue:</strong> 3D models not loading or performing poorly</p>
+                    <p><strong>Solution:</strong> Implement proper loading states, error handling, and optimize model sizes.</p>
+                    <div class="code-example">
+// Add loading state management
+const [modelLoaded, setModelLoaded] = useState(false);
+const [modelError, setModelError] = useState(false);
+
+<Suspense fallback={<Loader />}>
+  <Model 
+    onLoad={() => setModelLoaded(true)}
+    onError={() => setModelError(true)}
+  />
+</Suspense>
+        </div>
+                </div>
+            
+        </div>
+        
+        <div class="section">
+            <h2>Screenshots</h2>
+            <div class="screenshots">
+                
+                    <div class="screenshot">
+                        <h4>mobile</h4>
+                        <img src="mobile-full-page.png" alt="mobile" loading="lazy">
+                    </div>
+                
+                    <div class="screenshot">
+                        <h4>tablet</h4>
+                        <img src="tablet-full-page.png" alt="tablet" loading="lazy">
+                    </div>
+                
+                    <div class="screenshot">
+                        <h4>desktop</h4>
+                        <img src="desktop-full-page.png" alt="desktop" loading="lazy">
+                    </div>
+                
+                    <div class="screenshot">
+                        <h4>Hero</h4>
+                        <img src="section-hero.png" alt="Hero" loading="lazy">
+                    </div>
+                
+                    <div class="screenshot">
+                        <h4>About</h4>
+                        <img src="section-about.png" alt="About" loading="lazy">
+                    </div>
+                
+                    <div class="screenshot">
+                        <h4>Projects</h4>
+                        <img src="section-projects.png" alt="Projects" loading="lazy">
+                    </div>
+                
+                    <div class="screenshot">
+                        <h4>Testimonials</h4>
+                        <img src="section-testimonials.png" alt="Testimonials" loading="lazy">
+                    </div>
+                
+                    <div class="screenshot">
+                        <h4>Contact</h4>
+                        <img src="section-contact.png" alt="Contact" loading="lazy">
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+    
