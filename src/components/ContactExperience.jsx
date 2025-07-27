@@ -3,7 +3,11 @@ import { ContactBoy } from "./models/ContactBoy";
 
 const ContactExperience = () => {
   return (
-    <Canvas camera={{ position: [0, 0, 5] }}>
+    <Canvas 
+      camera={{ position: [0, 0, 5] }}
+      style={{ touchAction: 'pan-y' }}
+      onPointerDown={(e) => e.stopPropagation()}
+    >
       <ambientLight intensity={2} />
       <directionalLight position={[-5, 5, 5]} intensity={5} color={"#1C34FF"} />
       <group rotation={[0, -0.5, 0]}>

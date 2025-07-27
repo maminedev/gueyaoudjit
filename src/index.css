@@ -49,11 +49,18 @@ body {
   background-color: #000000;
   color: #cccccc;
   scroll-behavior: smooth;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 section {
   width: 100dvw;
   min-height: 100dvh;
+}
+
+canvas {
+  touch-action: pan-y !important;
+  pointer-events: auto;
 }
 
 @layer utilities {
