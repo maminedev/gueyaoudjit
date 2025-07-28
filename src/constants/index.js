@@ -136,6 +136,38 @@ const slides = [
     link: "#",
     tags: ["Web App", "Modern", "Design"],
   },
+  {
+    id: 7,
+    title: "Creative Portfolio",
+    description: "Stunning portfolio showcase with interactive elements",
+    img: "/images/p1.png",
+    link: "#",
+    tags: ["Portfolio", "Creative", "Interactive"],
+  },
+  {
+    id: 8,
+    title: "Business Dashboard",
+    description: "Professional dashboard for business analytics and insights",
+    img: "/images/p2.png",
+    link: "#",
+    tags: ["Dashboard", "Analytics", "Business"],
+  },
+  {
+    id: 9,
+    title: "E-commerce Platform",
+    description: "Modern e-commerce solution with seamless user experience",
+    img: "/images/p3.png",
+    link: "#",
+    tags: ["E-commerce", "Shopping", "UX"],
+  },
+  {
+    id: 10,
+    title: "Mobile App Interface",
+    description: "Clean and intuitive mobile application design",
+    img: "/images/p4.png",
+    link: "#",
+    tags: ["Mobile", "App", "UI Design"],
+  },
 ];
 
 const testimonials = [

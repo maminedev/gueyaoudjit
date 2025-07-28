@@ -3,10 +3,7 @@ import { Boy } from "./models/Boy";
 
 const HeroExperience = () => {
   return (
-    <Canvas 
-      style={{ touchAction: 'pan-y' }}
-      onPointerDown={(e) => e.stopPropagation()}
-    >
+    <Canvas>
       <ambientLight />
       <directionalLight position={[-2, 0, 3]} intensity={3} color={"#FF28D5"} />
       <directionalLight position={[2, 0, 3]} intensity={3} color={"#1C34FF"} />

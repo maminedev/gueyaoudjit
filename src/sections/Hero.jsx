@@ -1,34 +1,6 @@
 import GradientSpheres from "../components/GradientSpheres";
 import HeroExperience from "../components/HeroExperience";
-import { useState, useEffect } from "react";
-
 const Hero = () => {
-  const [showTouchHint, setShowTouchHint] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    // Check if device is mobile/touch capable
-    const checkMobile = () => {
-      const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-      const isMobileScreen = window.innerWidth <= 768;
-      setIsMobile(isTouchDevice && isMobileScreen);
-    };
-
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-
-    // Show hint for mobile users after a delay
-    if (isMobile) {
-      const timer = setTimeout(() => {
-        setShowTouchHint(true);
-        // Auto-hide after 4 seconds
-        setTimeout(() => setShowTouchHint(false), 4000);
-      }, 2000);
-      return () => clearTimeout(timer);
-    }
-
-    return () => window.removeEventListener('resize', checkMobile);
-  }, [isMobile]);
 
   return (
     <section
@@ -73,23 +45,6 @@ const Hero = () => {
         <HeroExperience />
       </div>
 
-      {/* Touch Hint for Mobile */}
-      {isMobile && showTouchHint && (
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-40 pointer-events-none">
-          <div className="bg-black bg-opacity-80 backdrop-blur-sm border border-white border-opacity-20 rounded-2xl px-6 py-4 flex items-center gap-3 animate-fadeIn">
-            <div className="relative">
-              <div className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center animate-pulse">
-                <div className="w-3 h-3 bg-white rounded-full"></div>
-              </div>
-              <div className="absolute -top-1 -right-1 w-4 h-4 border-2 border-white border-opacity-60 rounded-full animate-ping"></div>
-            </div>
-            <div className="text-white">
-              <p className="text-sm font-medium">Touch & drag to interact</p>
-              <p className="text-xs text-gray-300">Move your finger around the screen</p>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 };
