@@ -1,7 +1,6 @@
 import TitleHeader from "../components/TitleHeader";
 import ContactExperience from "../components/ContactExperience";
 import ContactForm from "../components/ContactForm";
-import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -20,36 +19,6 @@ const Contact = () => {
                 <ContactForm />
               </div>
               
-              {/* Contact Information */}
-              <div className="mt-8 bg-black bg-opacity-30 backdrop-blur-sm rounded-2xl p-6 border border-white border-opacity-10">
-                <h4 className="text-xl font-bold text-white mb-4">Contact Information</h4>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
-                    <Mail className="w-5 h-5 text-blue-400" />
-                    <span>gaiaoudjit@gmail.com</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
-                    <Phone className="w-5 h-5 text-green-400" />
-                    <span>+213 795 897 067</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
-                    <MapPin className="w-5 h-5 text-red-400" />
-                    <span>Bali, Indonesia</span>
-                  </div>
-                </div>
-                
-                <div className="mt-6 pt-4 border-t border-white border-opacity-10">
-                  <h5 className="text-lg font-semibold text-white mb-3">Follow Me</h5>
-                  <div className="flex gap-4">
-                    <a href="#" className="p-2 bg-white bg-opacity-10 rounded-lg hover:bg-opacity-20 transition-all duration-300 group">
-                      <Github className="w-5 h-5 text-gray-300 group-hover:text-white" />
-                    </a>
-                    <a href="#" className="p-2 bg-white bg-opacity-10 rounded-lg hover:bg-opacity-20 transition-all duration-300 group">
-                      <Linkedin className="w-5 h-5 text-gray-300 group-hover:text-blue-400" />
-                    </a>
-                  </div>
-                </div>
-              </div>
             </div>
             
             <div className="md:col-span-6 col-span-12">

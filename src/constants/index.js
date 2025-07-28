@@ -120,6 +120,22 @@ const slides = [
     link: "https://suburbia-skate.netlify.app/",
     tags: ["React", "Community", "Sports"],
   },
+  {
+    id: 5,
+    title: "Project Five",
+    description: "Innovative solution with cutting-edge technology and user experience",
+    img: "/images/p5.png",
+    link: "#",
+    tags: ["Innovation", "Technology", "UX"],
+  },
+  {
+    id: 6,
+    title: "Project Six",
+    description: "Advanced web application with modern design patterns",
+    img: "/images/p6.png",
+    link: "#",
+    tags: ["Web App", "Modern", "Design"],
+  },
 ];
 
 const testimonials = [
